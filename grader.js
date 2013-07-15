@@ -51,7 +51,6 @@ var checkHtmlFile = function(htmlfile, checksfile) {
 
 var checkHtmlUrl = function(url, checksfile) {
     restler.get(url).on('complete', function(result, response) {
-        console.log(result);
         checkAndPrint(result, fs.readFileSync(checksfile));
     });
 };
